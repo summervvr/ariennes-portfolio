@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Papers - Arienne's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>Arienne</span>
+      </div>
+      <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">Work Experience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="shopfest.html">Shopfest 2025</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="vmdc.html">VMDC 2025</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="services.html">Service Marketing</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="selling.html">Selling Week</a></div>
+                 <div class="link active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="acad.html">Academic Papers</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700"><a href="certificates.html">Certificates</a></div>
+            
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">Work  Experience</a>
+                <a href="shopfest.html">Shopfest 2025</a>
+                <a href="vmdc.html">VMDC 2025</a>
+                <a href="services.html">Service Marketing</a>
+                <a href="selling.html">Selling Week</a>
+                <a href="acad.html">Academic Papers</a>
+                <a href="certificates.html">Certificates</a>
+               
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+    </div>
+  </nav>
+
+   <!-- Academic Section -->
+<section id="acad" class="acad-section">
+  <div class="acad-container">
+    <h1 class="section-title" data-aos="fade-down" data-aos-duration="1000">
+      Academic <span>Papers</span>
+    </h1>
+    <p class="acad-intro" data-aos="fade-up" data-aos-duration="1000">
+      Here are some of my academic works. Click on each thumbnail to view or download the full paper.
+    </p>
+
+    <!-- Portrait Gallery -->
+    <div class="acad-gallery">
+      <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000">
+        <a href="https://docs.google.com/document/d/1X7XiXeYdrTARiPd92ZCnbRBSuJyYA6OU/edit?usp=drivesdk&ouid=107580281133914591594&rtpof=true&sd=true" target="_blank">
+          <img src="images/acad1.jpg" alt="Academic Paper 1">
+        </a>
+        <h3>Paper 1: Service Marketing Research</h3>
+      </div>
+
+      <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+        <a href="https://drive.google.com/file/d/1L358LAefus5Vrzz8Xhb3SznZF38DsdAi/view?usp=drivesdk" target="_blank">
+          <img src="images/acad2.jpg" alt="Academic Paper 2">
+        </a>
+        <h3>Paper 2: Scale Model Study</h3>
+      </div>
+
+      <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+        <a href="https://docs.google.com/document/d/1X7XiXeYdrTARiPd92ZCnbRBSuJyYA6OU/edit?usp=drivesdk&ouid=107580281133914591594&rtpof=true&sd=true" target="_blank">
+          <img src="images/acad3.jpg" alt="Academic Paper 3">
+        </a>
+        <h3>Paper 3: Consumer Behavior Analysis</h3>
+      </div>
+
+      <div class="gallery-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+        <a href="https://drive.google.com/file/d/14mI6IECQ5SY9KybA26YiJDNTk9N_ZFvT/view?usp=drivesdk" target="_blank">
+          <img src="images/acad4.jpg" alt="Academic Paper 4">
+        </a>
+        <h3>Paper 4: Culminating Project</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({offset:0});
+  </script>
+  <script>
+    function hamburg(){
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel(){
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>

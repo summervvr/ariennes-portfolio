@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Selling Week - Arienne's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Arienne</span>
+            </div>
+             <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">Work Experience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="shopfest.html">Shopfest 2025</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="vmdc.html">VMDC 2025</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="services.html">Service Marketing</a></div>
+                <div class="link active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="selling.html">Selling Week</a></div>
+                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="acad.html">Academic Papers</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700"><a href="certificates.html">Certificates</a></div>
+                
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">Work  Experience</a>
+                <a href="shopfest.html">Shopfest 2025</a>
+                <a href="vmdc.html">VMDC 2025</a>
+                <a href="services.html">Service Marketing</a>
+                <a href="selling.html">Selling Week</a>
+                <a href="acad.html">Academic Papers</a>
+                <a href="certificates.html">Certificates</a>
+               
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="selling" class="selling-section">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      
+    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">
+      Selling Week
+    </h2>
+
+    <div class="selling-content">
+      <h3>Sweet Bites – Mini Donuts Business </h3>
+      <h4>Category: Food & Beverage</h4>
+
+      <p>
+        Our team ventured into the mini donuts business, bringing bite-sized sweetness to students and young professionals. We wanted to offer not just a snack, but a delightful experience, affordable, shareable, and perfect for on-the-go cravings.
+      </p>
+
+      <blockquote class="selling-quote">
+        “Mini in size, big in flavor—our donuts were crafted to be the ultimate bite-sized happiness.”
+      </blockquote>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="selling-gallery" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+      <div class="gallery-item">
+        <img src="images/sell1.jpg" alt="Selling Showcase 1" onclick="openLightbox(this)">
+      </div>
+      <div class="gallery-item">
+        <img src="images/sell2.jpg" alt="Selling Showcase 2" onclick="openLightbox(this)">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full View">
+</div>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
+</body>
+</html>

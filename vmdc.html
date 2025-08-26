@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>VMDC 2025 - Arienne's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Playfair+Display:wght@600&family=Poppins:wght@400;500&family=Raleway:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Arienne</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">Work Experience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="shopfest.html">Shopfest 2025</a></div>
+                <div class="link active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="vmdc.html">VMDC 2025</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="services.html">Service Marketing</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="selling.html">Selling Week</a></div>
+                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700"><a href="acad.html">Academic Papers</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"><a href="certificates.html">Certificates</a></div>
+                
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">Work  Experience</a>
+                <a href="shopfest.html">Shopfest 2025</a>
+                <a href="vmdc.html">VMDC 2025</a>
+                <a href="services.html">Service Marketing</a>
+                <a href="selling.html">Selling Week</a>
+                <a href="acad.html">Academic Papers</a>
+                <a href="certificates.html">Certificates</a>
+                
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="vmdc-section">
+        <div class="vmdc-container">
+            <div class="vmdc-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <h1>VMDC 2025 <span></span></h1>
+            <h2>Visual Merchandising Design Competition</h2>
+            <h3>Theme: Brand Beyond Borders – Elevating Retail and Advertising Experiences Through Purposeful Design</h3>
+            <h4>Brand Assigned: Straightforward <br>
+                Team Name: Dash 1 – Summer Venue</h4>
+            <p>Our team was assigned Straightforward, a brand known for its clean, minimal aesthetic. Inspired by their Sylvan Sling Bag, we designed a concept that balanced simplicity, elegance, and a summer lifestyle vibe.</p>
+            <p>“From TikTok content to lookbooks and moodboards—we worked like a creative ecosystem, different roles, one vision.”</p>
+        </div>
+
+    <!-- Photo Grid -->
+    <div class="vmdc-photos" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+    <img src="images/vmdc1.jpg" alt="image 1" onclick="openLightbox(this)">
+    <img src="images/vmdc2.jpg" alt="image 2" onclick="openLightbox(this)">
+    <img src="images/vmdc3.jpg" alt="image 3" onclick="openLightbox(this)">
+    <img src="images/vmdc4.jpg" alt="image 4" onclick="openLightbox(this)">
+    </div>
+
+    <!-- Video Section -->
+    <div class="vmdc-video" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+    <video controls>
+        <source src="images/vmdc5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+     <span class="close">&times;</span>
+     <img class="lightbox-img" id="lightbox-img">
+     <video class="lightbox-video" id="lightbox-video" controls></video>
+    </div>  
+
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
+
+   <script>
+function openLightbox(media) {
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightbox-img");
+  var lightboxVideo = document.getElementById("lightbox-video");
+
+  lightbox.style.display = "flex";
+
+  // If it's a video
+  if (media.src.endsWith(".MOV") || media.src.endsWith(".mp4") || media.src.endsWith(".webm")) {
+    lightboxImg.style.display = "none";
+    lightboxVideo.style.display = "block";
+    lightboxVideo.src = media.src;
+  } else { // It's an image
+    lightboxVideo.style.display = "none";
+    lightboxImg.style.display = "block";
+    lightboxImg.src = media.src;
+  }
+}
+
+function closeLightbox() {
+  var lightbox = document.getElementById("lightbox");
+  var lightboxVideo = document.getElementById("lightbox-video");
+
+  lightbox.style.display = "none";
+  lightboxVideo.pause(); // stop video on close
+  lightboxVideo.currentTime = 0;
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Work Experience - Arienne's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Arienne</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">Work Experience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="shopfest.html">Shopfest 2025</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="vmdc.html">VMDC 2025</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="services.html">Service Marketing</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="selling.html">Selling Week</a></div>
+                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="acad.html">Academic Papers</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700"><a href="certificates.html">Certificates</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">Work  Experience</a>
+                <a href="shopfest.html">Shopfest 2025</a>
+                <a href="vmdc.html">VMDC 2025</a>
+                <a href="services.html">Service Marketing</a>
+                <a href="selling.html">Selling Week</a>
+                <a href="acad.html">Academic Papers</a>
+                <a href="certificates.html">Certificates</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <h1>Work Experience <span></span></h1>
+                <h3>“From zero to growth—building feeds that turn likes into loyal followers.”</h3>
+                <p>Hey there! I’m your go-to freelance marketing writer and social media handler. I turn brand ideas into thumb-stopping content, compelling campaigns, and stories that connect—so you can focus on what you do best. Scroll on to see how I help brands make waves (and real results).</p>
+                <p>“Numbers don’t lie! With a growing audience and engaged community, I turn insights into action and strategy into results”</p>
+                
+            </div>
+
+             <div class="about-image">
+            <img src="images/about1.jpg" alt="Profile 1">
+            <img src="images/about2.jpg" alt="Profile 2">
+            <img src="images/about3.jpg" alt="Profile 3">
+            <img src="images/about4.jpg" alt="Profile 4">
+            <img src="images/about5.jpg" alt="Profile 5">
+            <img src="images/about6.jpg" alt="Profile 6">
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
+</body>
+</html>

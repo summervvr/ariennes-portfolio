@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Services - Summer's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Summer</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">Work Experience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="shopfest.html">Shopfest 2025</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="vmdc.html">VMDC 2025</a></div>
+                <div class="link active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="services.html">Service Marketing</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="selling.html">Selling Week</a></div>
+                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="acad.html">Academic Papers</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700"><a href="certificates.html">Certificates</a></div>
+                
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">Work  Experience</a>
+                <a href="shopfest.html">Shopfest 2025</a>
+                <a href="vmdc.html">VMDC 2025</a>
+                <a href="services.html">Service Marketing</a>
+                <a href="selling.html">Selling Week</a>
+                <a href="acad.html">Academic Papers</a>
+                <a href="certificates.html">Certificates</a>
+              
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="services" class="services-section">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      
+    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">
+      Service Marketing
+    </h2>
+
+    <div class="services-content">
+      <h3>Scale Model Project</h3>
+      <h4>Culminating Activity 2023-2024</h4>
+
+      <p>
+        For our Scale Model Project, our group chose <strong>Dali Store</strong>, a brand known for 
+        affordable essentials such as utilities, canned goods, toiletries, and detergents. Inspired by 
+        its accessibility, we proposed an innovation that would modernize its services and create a 
+        more efficient shopping experience for consumers.
+      </p>
+
+      <blockquote class="services-quote">
+        “Designed for city consumers aged 21–45, budget-conscious, practical, and always on the lookout for 
+        affordable yet efficient grocery options.”
+      </blockquote>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="services-gallery" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+      <div class="gallery-item">
+        <img src="images/svs1.jpg" alt="Service Showcase 1" onclick="openLightbox(this)">
+      </div>
+      <div class="gallery-item">
+        <img src="images/svs2.jpg" alt="Service Showcase 2" onclick="openLightbox(this)">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full View">
+</div>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-500px)"
+        }
+    </script>
+</body>
+</html>
